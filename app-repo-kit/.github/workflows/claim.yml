@@ -1,0 +1,15 @@
+# Enables /claim and /unclaim in this repo. The logic lives in storytold/craft-common-actions.
+name: claim
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+permissions:
+  issues: write
+  pull-requests: read
+jobs:
+  claim:
+    if: github.event_name != 'issue_comment' || startsWith(github.event.comment.body, '/')
+    uses: storytold/craft-common-actions/.github/workflows/claim.yml@main
