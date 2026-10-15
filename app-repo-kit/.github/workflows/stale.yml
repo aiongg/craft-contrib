@@ -1,0 +1,32 @@
+# Only touches items where a maintainer asked for something (status: needs-info).
+name: stale
+on:
+  schedule:
+    - cron: '41 5 * * *'
+  workflow_dispatch:
+permissions:
+  issues: write
+  pull-requests: write
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
+        with:
+          only-labels: 'status: needs-info'
+          stale-issue-label: stale
+          stale-pr-label: stale
+          days-before-stale: 14
+          days-before-close: 16
+          stale-issue-message: >
+            We asked for more information two weeks ago. Could you add it?
+            This issue will close in 16 days otherwise. You can reopen it any time.
+          close-issue-message: >
+            Closing for now since we didn't get the information we needed.
+            Reopen whenever you can add it. Thanks for reporting.
+          stale-pr-message: >
+            This PR has been waiting on changes for two weeks. Still working on it?
+            It will close in 16 days otherwise. You can reopen it any time.
+          close-pr-message: >
+            Closing for now. Your work isn't lost: reopen once it's updated,
+            or open a fresh PR rebased on main. Thanks for contributing.

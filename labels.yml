@@ -1,0 +1,41 @@
+# Shared labels for every repo. Sync with: scripts/sync-labels.sh storytold
+# Changing this list needs an RFC.
+- name: "type: bug"
+  color: "d73a4a"
+  description: Something is broken
+- name: "type: feature"
+  color: "a2eeef"
+  description: New capability or change in behaviour
+- name: "type: docs"
+  color: "0075ca"
+  description: Documentation only
+- name: "status: needs-triage"
+  color: "fbca04"
+  description: Not yet reviewed by a maintainer
+- name: "status: accepted"
+  color: "0e8a16"
+  description: Agreed and ready to work on
+- name: "status: claimed"
+  color: "5319e7"
+  description: Someone is working on it (use /claim and /unclaim)
+- name: "status: needs-info"
+  color: "d4c5f9"
+  description: Waiting on the author for more information
+- name: "status: needs-design"
+  color: "f9d0c4"
+  description: Needs a UX or technical decision before coding
+- name: "status: blocked"
+  color: "b60205"
+  description: Waiting on something else
+- name: "priority: high"
+  color: "e99695"
+  description: Crash, data loss or security
+- name: "good first issue"
+  color: "7057ff"
+  description: Good for newcomers
+- name: "help wanted"
+  color: "008672"
+  description: Extra attention is needed
+- name: stale
+  color: "ededed"
+  description: No response after a request for information

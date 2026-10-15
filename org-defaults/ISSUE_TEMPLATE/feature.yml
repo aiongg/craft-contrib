@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest something new or a change in behaviour
+labels: ["type: feature", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Features need `status: accepted` before anyone starts coding, so nobody builds something that can't be merged."
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      description: The task or workflow, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: How does a reference tool handle it?
+      description: For example, how Photoshop, Illustrator or another app does this. Screenshots help.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behaviour (optional)

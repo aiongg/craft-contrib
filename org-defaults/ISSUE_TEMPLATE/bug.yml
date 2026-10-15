@@ -1,0 +1,31 @@
+name: Bug report
+description: Something is broken
+labels: ["type: bug", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Please search open issues first. A duplicate gets closed; a +1 on the original helps more.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open a 4000x3000 PNG\n2. Add an adjustment layer\n3. ..."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version and operating system
+      placeholder: "0.3.1 on Linux"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, sample files or logs
