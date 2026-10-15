@@ -1,0 +1,42 @@
+name: App donation
+description: Offer an app to join the org
+labels: ["status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: The criteria are in GOVERNANCE.md under "Apps".
+  - type: input
+    id: repo
+    attributes:
+      label: Repository link
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do, and which reference tool does it compare to?
+    validations:
+      required: true
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Criteria
+      options:
+        - label: The code is licensed under MIT OR Apache-2.0, or every copyright holder agrees to relicense it that way
+          required: true
+        - label: The code and assets are clean-room (nothing copied from closed products)
+          required: true
+        - label: It builds from a clean checkout with documented commands
+          required: true
+        - label: At least one person will work on it
+          required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Overlap with existing apps, if any, and how to handle it
+  - type: textarea
+    id: people
+    attributes:
+      label: Who will work on it (GitHub usernames)
+    validations:
+      required: true
